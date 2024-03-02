@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+{
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+#nav
+{
+    display:flex;
+    flex-direction: row;
+    justify-content:left;
+    align-items: center;
+    
+
+}
+#body
+{
+    display: flex;
+    flex-direction: row;
+    
+}
+#nav p
+{
+   
+    font-family: sans-serif;
+    margin-inline: 1%;
+}
+#nav input
+{
+    font-family: sans-serif;
+    height: 50%;
+}
+#sidebar
+{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+   
+    width:15%;
+    background-color: rgb(43, 41, 41);
+    border-radius: 10px;
+    margin-right: .5%;
+
+    color: blue;
+    text-align: center;
+}
+
+.sort
+{
+    display: flex;
+    flex-direction: row;
+    background-color:  black;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    padding: 1px;
+    
+    
+}
+
+.sort div p
+{
+    text-align: center;
+
+    font-size: 80%;
+    margin:0;
+    width:80px;
+    padding:5px;
+    
+    
+}
+.sort select
+{
+    height: 100%;
+    background-color:  rgb(43, 41, 41);
+    border-style: none;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+    border-radius: 10px;
+}
+#search
+{
+    background-image: linear-gradient(red,rgb(43, 41, 41),rgb(43, 41, 41));
+    display: flex;
+    flex-direction: column;
+    width:85%;
+    height: 610px;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    background-color: rgb(43, 41, 41);
+    border-radius: 10px;
+    
+}
+#search p
+{
+    margin:0;
+    font-size: 50%;
+    margin-bottom: 5%;
+}
+
+    
+    
+#main-body
+{
+    
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+#footer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    
+}
+#footer-block
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin: 1.5%;
+}
+#footer p
+{
+    margin:0;
+}
+
+#filter
+{
+    display: flex;
+    flex-direction: column;
+    margin:5%;
+
+}
+#search-act input
+{
+    color:white;
+    font-size: 60%;
+   background-color: black;
+    border-style: none;
+    border-radius: 15px;
+    width: 400px;
+    height: 100%;
+
+}
+#search-act button
+{
+    font-size: 60%;
+    font-weight: 700;
+    background-color:  rgb(34, 32, 32);
+    border-style: none;
+    color:white;
+    border-radius: 15px;
+    width: 100px;
+    height:100%;
+}
+#reccomendation
+{
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:100%;
+}
+#reccomendation div
+{
+    
+    background-color: black;
+    height: 150px;
+    width:100px;
+    border-radius: 5px;
+    
+
+}
+#search-act
+{
+    margin-bottom: 10%;
+}
+
+#Name
+{
+    font-size: 100px;
+    color: black;
+}
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <p>Home</p>
+
+    </div>
+    <div id="main-body">
+        <div id="sidebar" >
+            <br> Made by: <br>
+
+            <h2> ERROR_4 </h2> <br>
+            <h4> Members: </h4> 
+
+            Himanshu patel <br> <br>
+            Kunj Vipul Goyal <br> <br>
+            Luv Kansal <br> <br>
+            Piyush <br>
+        </div>
+        <div id="search">
+            <div id="Name">
+                <p>LINKLIB</p>
+            </div>
+            
+            <div id="search-act">
+                <form action="/submit" method="post">
+                    <label for=""use></label>
+                    <input type="text" id="use" name="use">
+                    <button>Search</button>
+                </form>
+                
+            </div>
+            <p>This Week's reccomendations</p>
+            <div id="reccomendation">
+                <div>
+                    <a href="https://www.gutenberg.org/ebooks/84.html.images">
+                        <img src="../static/84.jpg" alt="84" width="100" height="132">
+                    </a>    
+                </div>
+                <div>
+                    <a href="https://www.gutenberg.org/ebooks/1342.html.images">
+                        <img src="../static/1342.jpg" alt="1342" width="100" height="132">
+                    </a>    
+                </div>
+                <div>
+                    <a href="https://www.gutenberg.org/ebooks/2701.html.images">
+                        <img src="../static/2701.jpg" alt="2701" width="100" height="132">
+                    </a>    
+                </div>
+                <div>
+                    <a href="https://www.gutenberg.org/ebooks/394.html.images">
+                        <img src="../static/pg394.cover.medium.jpg" alt="394" width="100" height="132">
+                    </a>    
+                </div>
+                <div>
+                    <a href="https://www.gutenberg.org/ebooks/45489.html.images">
+                        <img src="../static/45489.jpg" alt="45489" width="100" height="132">
+                    </a>    
+                </div>
+    
+            </div>
+        </div>
+        
+        
+    </div>
+    <div id="footer">
+        <div id="footer-block">
+            <p>Copyright</p>
+            <p>The content of this website has been taken from</p>
+            <a href="https://www.gutenberg.org/">Project Gutenberg</a>
+        </div>
+        
+
+    </div>
+</body>
+</html>
