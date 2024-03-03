@@ -14,10 +14,12 @@ def hello_world():
 @app.route('/submit', methods=['POST'])
 def search():
     use = request.form['use']
-    data = fetch.extract_data(use)
-    if(data != []):
-        html_table = data.to_html(index=False, classes="table")
-        temp = Template(
+    data_list = fetch.extract_data(use)
+    if data_list != []:
+        rows = ""
+        for row in data_list:
+            rows += f"<tr><td>{row[0]}</td><td>{row[1]}</td><td>{row[2]}</td><td><a href='{row[3]}'>Link</a></td><td><a href='{row[4]}'>Link</a></td></tr>"        
+        temp = (
             """
 <!DOCTYPE html>
 <html lang="en">
@@ -251,7 +253,6 @@ tr:nth-child(even){
         <table>
             <tr>
                 <div>
-                    <TH>S.No.  </TH>
                     <th>Name  </th>
                     <th>Author  </th>
                     <th>Language  </th>
@@ -260,26 +261,22 @@ tr:nth-child(even){
                 </div>
 
             </tr>
-            {% for row in data %}
-            <tr>
-                <td>{{row['name']}}</td>
-                <td>xyz</td>
-                <td>dfiuagsigaisyg</td>
-                <td>dhudgusadiug</td>
-                <td>jdgagdgsgdgasg</td>
-            </tr>
-            {% endfor %}
+            """+rows+"""""
+
         </table>
         </div>
     </div>
 </body>
 </html>
-"""
+""" 
         )
-        page=temp.render()
+
         with open("output.html","w") as file:
-            file.write(page)
-            return page
+            file.write(temp)
+            return temp
+
+    else:
+        return "NO DATA FOUND!"
     
 
 if __name__ == "__main__":
