@@ -1,5 +1,5 @@
 
-# LinkLiib
+# LinkLib
 
 An online book fetcher
 ## Appendix
